@@ -22,12 +22,11 @@
 </body>
 <br> <br> <br> <br> <br> <br> <br>
 <h2 align='center'>
-<a href="GiacenzeMilano.php">Giacenze Milano</a>
+<a href="View.php?tabella=vwGiacenzeMilano">Giacenze Milano</a>
 <br> <br> <br>
-<a href="CarichiRimini.php">Carichi Rimini</a>
+<a href="View.php?tabella=vwCarichiRimini">Carichi Rimini</a>
 <br> <br> <br>
-<a href="MaggiorCosto.php">Maggior Costo</a>
+<a href="View.php?tabella=vwMaggiorCosto">Maggior Costo</a>
 <br> <br> <br>
 </h2>
-<p id="prova" class="hidden"></p>
 </html>
