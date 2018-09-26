@@ -8,10 +8,9 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse" id="navigation">
-    <form class="form-inline" action ="Login.php">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">Menù</a>
+                <a class="navbar-brand">Maggior Costo</a>
             </div>
             <div class="container">
             <ul class="nav navbar-form navbar-right">
