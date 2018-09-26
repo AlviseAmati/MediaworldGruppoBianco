@@ -22,7 +22,7 @@
 </body>
 <br> <br> <br> <br> <br> <br> <br>
 <h2 align='center'>
-<a href="GiacenzeMilano.php"> Giacenze Milano</a>
+<a href="GiacenzeMilano.php">Giacenze Milano</a>
 <br> <br> <br>
 <a href="CarichiRimini.php">Carichi Rimini</a>
 <br> <br> <br>
