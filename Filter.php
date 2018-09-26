@@ -5,7 +5,7 @@ try {
     $sql = "SHOW COLUMNS From ".$_GET['tabella'];    
     $stmt = $db->prepare($sql);        
     $stmt->execute();
-    echo"<table class='table table-hoover' id='tabella'>";
+    echo"<table class='table table-hoover'>";
     echo "<thead><tr>";
     $i=0;
     while($field = $stmt->fetch(PDO::FETCH_ASSOC)){

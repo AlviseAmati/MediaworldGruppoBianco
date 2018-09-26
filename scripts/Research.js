@@ -22,3 +22,10 @@ function Reset() {
             celle[j].style.backgroundColor="white";
     }
 }
+
+function Filter(tabella){
+    var stringa = document.getElementById("research").value;
+    if(stringa!="" && stringa!=".") {
+        $("#id_table").load("Filter.php?tabella="+tabella+"&stringa=" + stringa);
+    }
+}

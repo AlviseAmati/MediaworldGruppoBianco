@@ -10,6 +10,7 @@ else $page=$_GET['page'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script language="JavaScript" type="text/JavaScript" src="scripts/Research.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="scripts/Sorter.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             $("#id_table").load("Select.php?tabella="+'<?php echo $_GET['tabella']; ?>'+"&page="+'<?php echo $page; ?>');
@@ -20,15 +21,14 @@ else $page=$_GET['page'];
     <nav class="navbar navbar-inverse" id="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">Giacenze Milano</a>
+                <a class="navbar-brand">View</a>
             </div>
             <div class="container">
             <ul class="nav navbar-form navbar-right">
                 <div class="form-group has-feedback">
                     <input type='text' id='research' class='form-control' onkeyup='Ricerca();' placeholder='Cerca...'>
-
-                    <i class="glyphicon glyphicon-search form-control-feedback"></i>
-                </div>
+                    <button type="button" id='filter' class="btn btn-primary" onclick='Filter();'><span class="glyphicon glyphicon-search"></span></button>
+                </div>                
             </ul>
             </div>
         </div>
