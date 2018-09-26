@@ -1,3 +1,7 @@
+<?php
+if(!isSet($_GET['page'])) $page=1;
+else $page=$_GET['page']; 
+?>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -5,14 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="scripts/Research.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-            $("#id_table").load("Select.php?tabella="+'<?php echo $_GET['tabella']; ?>');
+            $("#id_table").load("Select.php?tabella="+'<?php echo $_GET['tabella']; ?>'+"&page="+'<?php echo $page; ?>');
         });
     </script>
 </head>
 <body>
-<nav class="navbar navbar-inverse" id="navigation">
+    <nav class="navbar navbar-inverse" id="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand">Giacenze Milano</a>
@@ -27,9 +32,8 @@
             </ul>
             </div>
         </div>
-    </form>
-</nav>
-<table class="table table-hoover" id="id_table">
-</table>
+    </nav>
+    <div id="id_table">
+    </div>
 </body>
 </html>
