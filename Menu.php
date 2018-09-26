@@ -11,7 +11,7 @@
     <form class="form-inline" action ="Login.php">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">Menu</a>
+                <a class="navbar-brand">Menù</a>
             </div>
             <div class="container">
             <ul class="nav navbar-form navbar-right">
@@ -21,13 +21,14 @@
     </form>
     </nav>
 </body>
+<br> <br> <br> <br> <br> <br> <br>
 <h2 align='center'>
-<a href="GiacenzeMilano.php"> GiacenzeMilano </a>
-<br> <br>
-<a href="CarichiRimini.php">CarichiRimini</a>
-<br> <br>
-<a href="MaggiorCosto.php">MaggiorCosto</a>
-<br> <br>
+<a href="GiacenzeMilano.php"> Giacenze Milano </a>
+<br> <br> <br>
+<a href="CarichiRimini.php">Carichi Rimini</a>
+<br> <br> <br>
+<a href="MaggiorCosto.php">Maggior Costo</a>
+<br> <br> <br>
 </h2>
 <p id="prova" class="hidden"></p>
 </html>
