@@ -14,6 +14,11 @@
             </div>
             <div class="container">
             <ul class="nav navbar-form navbar-right">
+                <div class="form-group has-feedback">
+                    <input type='text' id='research' class='form-control' onkeyup='Ricerca();' placeholder='Cerca...'>
+
+                    <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                </div>
             </ul>
             </div>
         </div>
