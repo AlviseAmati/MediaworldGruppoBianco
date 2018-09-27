@@ -31,12 +31,13 @@ try {
     $sql = "SELECT * FROM " .$_GET['tabella']. " LIMIT ".$primo.",".$perpage;
     $stmt1 = $db->prepare($sql);        
     $stmt1->execute(); 
-
+    
     while($row = $stmt1->fetch(PDO::FETCH_ASSOC)){
         echo "<tr>";
         $sql = "SHOW COLUMNS From ".$_GET['tabella'];    
         $stmt = $db->prepare($sql);        
         $stmt->execute();
+        $i=0;
         while($field = $stmt->fetch(PDO::FETCH_ASSOC)){
             $campo=$row[$field['Field']];
             echo "<td onclick='sorting($i);'>" .$campo. "</td>";

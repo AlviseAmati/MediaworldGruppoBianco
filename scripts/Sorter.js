@@ -4,8 +4,6 @@ function sorting(value){
     switching = true;
     if(!isNumeric(table.rows[1].cells[value].innerHTML)){
         while (switching) {
-            //ordinamento alfabetico
-
             switching = false;
             rows = table.getElementsByTagName("TR");
             for (i = 1; i < (rows.length - 1); i++) {
