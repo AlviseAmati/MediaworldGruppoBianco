@@ -1,4 +1,4 @@
-function sorting(value){         
+function sorting(value, method){         
     var table, rows, switching, i, x, y, shouldSwitch;
     table = document.getElementById("tabella");
     switching = true;
@@ -10,9 +10,17 @@ function sorting(value){
                 shouldSwitch = false;
                 x = rows[i].getElementsByTagName("TD")[value];
                 y = rows[i + 1].getElementsByTagName("TD")[value];
-                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    shouldSwitch= true;
-                    break;
+                if(method=="up"){
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch= true;
+                        break;
+                    }
+                }
+                if(method=="down"){
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch= true;
+                        break;
+                    }
                 }
             }
             if (shouldSwitch) {
@@ -26,9 +34,17 @@ function sorting(value){
         while(switching){
             switching=false;
             for (var i = 1; i < table.rows.length-1; i++) {
-                if(parseFloat(table.rows[i].cells[value].innerHTML)>parseFloat(table.rows[i+1].cells[value].innerHTML)){
-                    table.rows[i].parentNode.insertBefore(table.rows[i+1], table.rows[i]);
-                    switching=true;
+                if(method=="up"){
+                    if(parseFloat(table.rows[i].cells[value].innerHTML)>parseFloat(table.rows[i+1].cells[value].innerHTML)){
+                        table.rows[i].parentNode.insertBefore(table.rows[i+1], table.rows[i]);
+                        switching=true;
+                    }
+                }
+                if(method=="down"){
+                    if(parseFloat(table.rows[i].cells[value].innerHTML)<parseFloat(table.rows[i+1].cells[value].innerHTML)){
+                        table.rows[i].parentNode.insertBefore(table.rows[i+1], table.rows[i]);
+                        switching=true;
+                    }
                 }
             }
         }

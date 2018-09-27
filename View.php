@@ -27,13 +27,14 @@ else $page=$_GET['page'];
             <ul class="nav navbar-form navbar-right">
                 <div class="form-group has-feedback">
                     <input type='text' id='research' class='form-control' onkeyup='Ricerca();' placeholder='Cerca...'>
-                    <button type="button" id='filter' class="btn btn-primary" onclick='Filter();'><span class="glyphicon glyphicon-search"></span></button>
+                    <button type="button" id='filter' class="btn btn-primary" onclick='Filter("<?php echo $_GET["tabella"]; ?>");'><span class="glyphicon glyphicon-search"></span></button>
                 </div>                
             </ul>
             </div>
         </div>
     </nav>
-    <div id="id_table">
+    <br>
+    <div class="container" id="id_table">
     </div>
 </body>
 </html>

@@ -23,26 +23,9 @@ function Reset() {
     }
 }
 
-function Filter(){
-var input, filter, table, tr, td, i;
-input = document.getElementById("research");
-filter = input.value.toUpperCase();
-table = document.getElementById("tabella");
-tr = table.getElementsByTagName("tr");
-//col = table.getElementsByTagName("td");
-
-
-for (i = 0; i < tr.length; i++) {
-    //for (j = 0; j < col.length; j++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-        }
-    }
-    //} 
+function Filter(tabella){
+    filter = document.getElementById("research").value.toUpperCase();
+    $("#tabella").load("Filter.php?tabella=" +tabella+ "&filter="+filter);
 }
+
 

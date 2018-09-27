@@ -4,3 +4,4 @@ $username="root";
 $password="";
 $dbname="MediaworldGruppoBianco";
 $perpage=10;
+$pagination=5;
