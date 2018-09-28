@@ -69,20 +69,39 @@ try {
     }
     echo '<li class="page-item"><a class="page-link" href="View.php?tabella='.$_GET['tabella'].'&page=1">1</a></li>';
     
-    if($tot_pagine>1){
-        if($page>floor($pagination/2)&&$page<$tot_pagine-floor($pagination/2))    {
-            for($i=$page-floor($pagination/2); $i<=$page+floor($pagination/2); $i++)    {
-                echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+    if($tot_pagine>1)
+    {
+        if($page>$tot_pagine-floor($pagination/2))
+        {
+            if($page-$pagination>0)
+            {
+                for($i=$page-$pagination; $i<=$tot_pagine; $i++)    {
+                    echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+                }
+            }
+            else
+            {
+                for($i=2; $i<=$pagination; $i++)    {
+                    echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+                }
             }
         }
         else
         {
-            for($i=2; $i<=$tot_pagine-1; $i++)    {
-                echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+            if($page>floor($pagination/2)&&$page<$tot_pagine-floor($pagination/2))    {
+                for($i=$page-floor($pagination/2); $i<=$page+floor($pagination/2); $i++)    {
+                    echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+                }
             }
-        }
+            else
+            {
+                for($i=2; $i<=$pagination; $i++)    {
+                    echo'<li class="page-item"><a href="View.php?tabella='.$_GET['tabella'].'&page='.$i.'">'.$i.'</a></li>';
+                }
+            }
 
-        echo '<li class="page-item"><a class="page-link" href="View.php?tabella='.$_GET['tabella'].'&page='.$tot_pagine.'">'.$tot_pagine.'</a></li>';
+            echo '<li class="page-item"><a class="page-link" href="View.php?tabella='.$_GET['tabella'].'&page='.$tot_pagine.'">'.$tot_pagine.'</a></li>';
+        }
     }
     if($page+$pagination<=$tot_pagine)    {
         echo'<li class="page-item">
